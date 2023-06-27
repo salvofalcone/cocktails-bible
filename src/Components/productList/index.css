@@ -1,0 +1,8 @@
+.ProductList {
+  margin: 30px;
+}
+
+.ProductList__list {
+  display: flex;
+  gap: 12px;
+}
