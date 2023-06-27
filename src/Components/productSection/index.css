@@ -1,5 +1,15 @@
 .ProductSection {
-  border: 2px solid red;
+  max-width: 500px;
+  position: relative;
+  margin: 50px auto;
+}
+
+.ProductSection img {
+  width: 100%;
+  height: 380px;
+  object-fit: cover;
+  border-radius: 6px;
+  filter: drop-shadow(1px 1px 10px #0000004f);
 }
 
 .ProductSection__text {
@@ -9,8 +19,35 @@
   padding-inline: 20px;
 }
 
-.ProductSection img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
+.ProductSection__text--title {
+  font-size: 1.5rem;
+}
+
+.ProductSection__text--desc,
+.ProductSection__mixing {
+  color: #808080;
+}
+
+.ProductionSection__ingredients {
+  margin: 12px 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ProductSection__ingredients--listItem {
+  background-color: rgba(0, 0, 0, 0.129);
+  padding: 6px 12px;
+  border-radius: 12px;
+}
+
+.ProductSection__closebtn {
+  border: none;
+  background: none;
+  font-weight: bold;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  cursor: pointer;
+  color: #000000;
 }
