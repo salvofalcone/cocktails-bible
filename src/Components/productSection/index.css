@@ -1,0 +1,16 @@
+.ProductSection {
+  border: 2px solid red;
+}
+
+.ProductSection__text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 20px;
+}
+
+.ProductSection img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+}

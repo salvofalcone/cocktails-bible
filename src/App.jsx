@@ -1,9 +1,16 @@
+import { useState } from "react";
 import "./App.css";
 
-import Compo from "./Components/Comp";
+import ProductSection from "./components/productSection";
 
 function App() {
-  return <div className="App"></div>;
+  const [productSection, setPoductSection] = useState("margarita");
+
+  return (
+    <div className="App">
+      <ProductSection productSection={productSection} />
+    </div>
+  );
 }
 
 export default App;
