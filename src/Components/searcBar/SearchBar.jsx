@@ -31,8 +31,26 @@ const SearchBar = () => {
 
       <div className="Cocktail__Preview">
         {cocktailList.map((cocktail) => (
-          <p className="Cocktail__Preview--ListItem">{cocktail.strDrink}</p>
+          <div className="Cocktail__Preview--ListItem">
+            <img
+              src={cocktail.strDrinkThumb}
+              alt={cocktail.strDrinkThumb}
+              className="Cocktail__Preview--Image"
+            />
+            <p>{cocktail.strDrink}</p>
+          </div>
         ))}
+
+        {/* {cocktailList.length > 0 && (
+          <>
+            <img
+              src={cocktailList[0].strDrinkThumb}
+              alt={cocktailList[0].strDrinkThumb}
+              className="Cocktail__Preview--Image"
+            />
+            <p>{cocktailList[0].strDrink}</p>
+          </>
+        )} */}
       </div>
     </div>
   );
