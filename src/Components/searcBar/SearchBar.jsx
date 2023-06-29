@@ -8,8 +8,10 @@ const SearchBar = () => {
   const [cocktailList, setCocktailList] = useState([]);
 
   useEffect(() => {
-    if (searchCocktail !== "") {
+    if (searchCocktail.length >= 3) {
       GET("?s=" + searchCocktail).then((data) => setCocktailList(data.drinks));
+    } else {
+      setCocktailList([]);
     }
   }, [searchCocktail]);
 
