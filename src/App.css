@@ -1,0 +1,15 @@
+nav {
+  background-color: #f6a71e;
+  height: 60px;
+}
+
+.Nav__List {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+}
+
+.Nav__List--Item {
+  text-transform: uppercase;
+letter-spacing: 1px;
+}
