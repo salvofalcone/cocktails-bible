@@ -6,10 +6,11 @@ nav {
 .Nav__List {
   display: flex;
   justify-content: space-between;
-  padding: 20px 40px;
+  align-items: baseline;
+  padding: 16px 40px;
 }
 
 .Nav__List--Item {
   text-transform: uppercase;
-letter-spacing: 1px;
+  letter-spacing: 1px;
 }

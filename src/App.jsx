@@ -40,18 +40,17 @@ function App() {
           <li onClick={() => setProductSection("")} className="Nav__List--Item">
             Home
           </li>
-          <li
-            onClick={() => setProductSection("contacts")}
-            className="Nav__List--Item">
-            Contact Us
-          </li>
 
           <li>
             <SearchBar />
           </li>
 
+          <li
+            onClick={() => setProductSection("contacts")}
+            className="Nav__List--Item">
+            Contact Us
+          </li>
         </ul>
-
       </nav>
 
       {onRender()}
