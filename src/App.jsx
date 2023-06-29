@@ -4,6 +4,7 @@ import { useState } from "react";
 import ProductSection from "./components/productSection";
 import ProductList from "./components/productList";
 import Contacts from "./components/contacts";
+import SearchBar from "./components/searcBar";
 
 import "./App.css";
 
@@ -39,6 +40,11 @@ function App() {
           <li onClick={() => setProductSection("")} className="Nav__List--Item">
             Home
           </li>
+
+          <li>
+            <SearchBar />
+          </li>
+
           <li
             onClick={() => setProductSection("contacts")}
             className="Nav__List--Item">
