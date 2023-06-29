@@ -1,0 +1,21 @@
+.Contacts {
+  display: flex;
+  flex-direction: column;
+  margin: 18px;
+}
+
+.Contacts input {
+  width: 280px;
+  padding: 4px;
+  border-radius: 12px;
+  margin-bottom: 18px;
+  border: 0.5px solid grey;
+}
+
+.Contacts label {
+  text-transform: uppercase;
+}
+
+.Contacts__submit {
+  background-color: rgb(95, 167, 170);
+}
