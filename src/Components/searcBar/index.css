@@ -13,9 +13,26 @@
   margin-top: 8px;
   border-radius: 12px;
   background-color: white;
-  width: 200px;
+  width: fit-content;
 }
 
 .Cocktail__Preview--ListItem {
-  padding: 2px 12px;
+  display: flex;
+  gap: 4px;
+  padding: 2px;
+  margin: 4px;
+}
+
+.Cocktail__Preview--ListItem:first-child {
+  padding-top: 12px;
+}
+
+.Cocktail__Preview--ListItem:last-child {
+  padding-bottom: 12px;
+}
+
+.Cocktail__Preview--Image {
+  width: 30px;
+  height: 30px;
+  border-radius: 100%;
 }
