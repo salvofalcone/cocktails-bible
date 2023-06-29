@@ -1,5 +1,20 @@
+.SearchBar__Main {
+  position: relative;
+}
+
 .SearchBar {
   border-radius: 12px;
   padding: 4px 8px;
   border: none;
+}
+
+.Cocktail__Preview {
+  margin-top: 8px;
+  border-radius: 12px;
+  background-color: white;
+  width: 200px;
+}
+
+.Cocktail__Preview--ListItem {
+  padding: 2px 12px;
 }

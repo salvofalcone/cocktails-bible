@@ -4,19 +4,21 @@ import { GET } from "../../utils/http";
 import "./index.css";
 
 const SearchBar = () => {
-  const [searchCocktail, setSearchCocktail] = useState({});
+  const [searchCocktail, setSearchCocktail] = useState("");
+  const [cocktailList, setCocktailList] = useState([]);
 
   useEffect(() => {
-    GET("?s=" + searchCocktail).then((data) => console.log(data.drinks));
+    if (searchCocktail !== "") {
+      GET("?s=" + searchCocktail).then((data) => setCocktailList(data.drinks));
+    }
   }, [searchCocktail]);
 
   const onHandleChange = (e) => {
     setSearchCocktail(e.target.value);
-    // console.log(searchCocktail);
   };
 
   return (
-    <div>
+    <div className="SearchBar__Main">
       <input
         type="text"
         name="searchbar"
@@ -24,6 +26,12 @@ const SearchBar = () => {
         className="SearchBar"
         onChange={onHandleChange}
       />
+
+      <div className="Cocktail__Preview">
+        {cocktailList.map((cocktail) => (
+          <p className="Cocktail__Preview--ListItem">{cocktail.strDrink}</p>
+        ))}
+      </div>
     </div>
   );
 };
