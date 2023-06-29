@@ -4,6 +4,7 @@ import { useState } from "react";
 import ProductSection from "./components/productSection";
 import ProductList from "./components/productList";
 import Contacts from "./components/contacts";
+import SearchBar from "./components/searcBar";
 
 import "./App.css";
 
@@ -44,7 +45,13 @@ function App() {
             className="Nav__List--Item">
             Contact Us
           </li>
+
+          <li>
+            <SearchBar />
+          </li>
+
         </ul>
+
       </nav>
 
       {onRender()}
