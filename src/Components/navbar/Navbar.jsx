@@ -10,7 +10,7 @@ const Navbar = ({ setProductSection }) => {
           Home
         </li>
 
-        <li>
+        <li className="Nav__List--Item">
           <SearchBar setProductSection={setProductSection} />
         </li>
 

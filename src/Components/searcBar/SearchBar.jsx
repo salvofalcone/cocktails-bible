@@ -39,7 +39,7 @@ const SearchBar = ({ setProductSection }) => {
 
       <div className="Cocktail__Preview">
         {cocktailList?.map((cocktail) => (
-          <div className="Cocktail__Preview--ListItem">
+          <div className="Cocktail__Preview--ListItem" key={cocktail.strDrink}>
             <img
               src={cocktail.strDrinkThumb}
               alt={cocktail.strDrinkThumb}

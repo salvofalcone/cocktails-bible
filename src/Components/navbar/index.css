@@ -1,17 +1,23 @@
 nav {
-    background-color: #f6a71e;
-    height: 60px;
-  }
-  
+  background-color: #f6a71e;
+  height: 60px;
+}
+
+.Nav__List {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 16px 40px;
+}
+
+.Nav__List--Item {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+@media (max-width: 390px) {
   .Nav__List {
-    display: flex;
-    justify-content: space-between;
-    align-items: baseline;
-    padding: 16px 40px;
+    padding: 16px 4px;
   }
-  
-  .Nav__List--Item {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
+}

@@ -16,7 +16,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-inline: 20px;
+
 }
 
 .ProductSection__text--title {
@@ -50,4 +50,15 @@
   right: 12px;
   cursor: pointer;
   color: #ffffff;
+}
+
+@media (max-width: 390px) {
+  .ProductSection {
+    margin: 6px;
+    height: 100vh;
+  }
+
+  .ProductSection img{
+    height: 50%;
+  }
 }

@@ -1,12 +1,16 @@
 .ProductList {
-  margin: 30px;
+  margin: 4px;
+  padding: 12px;
+  border-radius: 18px;
+  overflow-x: scroll;
 }
 
 .ProductList__Title {
   text-transform: uppercase;
+  padding: 12px;
 }
 
 .ProductList__list {
-  /* display: flex; */
+  display: flex;
   gap: 12px;
 }
