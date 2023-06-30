@@ -1,0 +1,9 @@
+.Filters {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.Filters__Category {
+  padding-inline: 18px;
+}
