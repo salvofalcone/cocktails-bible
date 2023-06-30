@@ -1,4 +1,6 @@
 import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper.css";
 
 import ProductItem from "../productItem";
 
@@ -15,15 +17,19 @@ const ProductList = ({ name, setProductSection }) => {
 
   return (
     <div className="ProductList">
-      <h2>{name}</h2>
+      <h2 className="ProductList__Title">{name}</h2>
       <div className="ProductList__list">
-        {listData.map((drink) => (
-          <ProductItem
-            data={drink}
-            setProductSection={setProductSection}
-            key={drink.idDrink}
-          />
-        ))}
+        <Swiper
+          spaceBetween={1}
+          slidesPerView={6}
+          navigation
+          className="swiper-container">
+          {listData.map((drink) => (
+            <SwiperSlide key={drink.idDrink}>
+              <ProductItem data={drink} setProductSection={setProductSection} />
+            </SwiperSlide>
+          ))}
+        </Swiper>
       </div>
     </div>
   );

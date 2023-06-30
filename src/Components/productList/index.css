@@ -2,7 +2,11 @@
   margin: 30px;
 }
 
+.ProductList__Title {
+  text-transform: uppercase;
+}
+
 .ProductList__list {
-  display: flex;
+  /* display: flex; */
   gap: 12px;
 }
