@@ -15,7 +15,7 @@ const ProductList = ({ name, setProductSection }) => {
 
   return (
     <div className="ProductList">
-      <h2>{name}</h2>
+      <h2 className="ProductList__Title">{name}</h2>
       <div className="ProductList__list">
         {listData.map((drink) => (
           <ProductItem

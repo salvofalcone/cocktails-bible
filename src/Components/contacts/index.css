@@ -1,15 +1,27 @@
+.Contacts__Main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
 .Contacts {
   display: flex;
   flex-direction: column;
-  margin: 18px;
+  width: fit-content;
+  height: 340px;
+  padding: 24px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 24px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  border-radius: 12px;
 }
 
 .Contacts input {
   width: 280px;
-  padding: 4px;
+  padding: 12px;
   border-radius: 12px;
   margin-bottom: 18px;
-  border: 0.5px solid grey;
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 
 .Contacts label {
@@ -17,5 +29,7 @@
 }
 
 .Contacts__submit {
-  background-color: rgb(95, 167, 170);
+  background-color: #f6a71e;
+  border: none;
+  text-transform: uppercase;
 }

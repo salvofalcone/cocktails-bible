@@ -12,10 +12,3 @@ li{
   list-style-type: none;
 }
 
-/* TABLET */
-@media (media-width: 767px) {
-}
-
-/* DESCKTOP */
-@media (min-width: 1024px) {
-}

@@ -12,16 +12,16 @@ const Filters = ({ categoriesList, setCategoriesList, setFilteredList }) => {
     }, []);
   }
 
-
-
   const onHandleClick = (currentId) => {
     const updatedCategoriesList = categoriesList.map((category) =>
       category.id === currentId
-        ? { ...category, status: category.status === "active" ? "disabled" : "active" }
+        ? {
+            ...category,
+            status: category.status === "active" ? "disabled" : "active",
+          }
         : category
     );
     setCategoriesList(updatedCategoriesList);
-
 
     const filteredCategories = updatedCategoriesList.filter(
       (category) => category.status === "active"
@@ -29,12 +29,11 @@ const Filters = ({ categoriesList, setCategoriesList, setFilteredList }) => {
     setFilteredList(filteredCategories);
   };
 
-
   return (
     <div className="Filters">
       {categoriesList.map((category) => (
         <div
-          className={category.status}
+          className={`Filter ${category.status}`}
           key={category.name}
           onClick={() => onHandleClick(category.id)}>
           <p className={category.name}>{category.name}</p>

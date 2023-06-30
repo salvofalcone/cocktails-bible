@@ -6,7 +6,7 @@ const ProductItem = ({ data, setProductSection }) => {
   return (
     <div className="ProductItem" onClick={onHandleClick}>
       <img src={data.strDrinkThumb} alt={data.strDrink} />
-      <p>{data.strDrink}</p>
+      <p className="ProductItem__Title">{data.strDrink}</p>
     </div>
   );
 };
