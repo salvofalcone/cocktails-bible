@@ -2,11 +2,7 @@ import { useEffect } from "react";
 
 import "./index.css";
 
-const Filters = ({
-  categoriesList,
-  setCategoriesList,
-  setFilteredList,
-}) => {
+const Filters = ({ categoriesList, setCategoriesList, setFilteredList }) => {
   {
     useEffect(() => {
       const filteredCategories = categoriesList.filter(
@@ -16,16 +12,23 @@ const Filters = ({
     }, []);
   }
 
-  const onHandleClick = (prev) => {
-    // console.log(prev);
-    // if ((prev = "active")) {
-    //   prev = "disabled";
-    //   console.log(prev);
-    // } else {
-    //   prev = "active";
-    //   console.log(prev);
-    // }
+
+
+  const onHandleClick = (currentId) => {
+    const updatedCategoriesList = categoriesList.map((category) =>
+      category.id === currentId
+        ? { ...category, status: category.status === "active" ? "disabled" : "active" }
+        : category
+    );
+    setCategoriesList(updatedCategoriesList);
+
+
+    const filteredCategories = updatedCategoriesList.filter(
+      (category) => category.status === "active"
+    );
+    setFilteredList(filteredCategories);
   };
+
 
   return (
     <div className="Filters">
@@ -33,7 +36,7 @@ const Filters = ({
         <div
           className={category.status}
           key={category.name}
-          onClick={() => onHandleClick(category.status)}>
+          onClick={() => onHandleClick(category.id)}>
           <p className={category.name}>{category.name}</p>
         </div>
       ))}
