@@ -2,24 +2,29 @@ import { useEffect } from "react";
 
 import "./index.css";
 
-const Filters = ({ categoriesList, setCategoriesList }) => {
+const Filters = ({
+  categoriesList,
+  setCategoriesList,
+  setFilteredList,
+}) => {
   {
     useEffect(() => {
       const filteredCategories = categoriesList.filter(
         (category) => category.status === "active"
       );
-      setCategoriesList(filteredCategories);
+      setFilteredList(filteredCategories);
     }, []);
   }
 
   const onHandleClick = (prev) => {
-    if ((prev = "active")) {
-      prev = "disable";
-      setCategoriesList()
-    } else {
-      prev = "active";
-      console.log(prev);
-    }
+    // console.log(prev);
+    // if ((prev = "active")) {
+    //   prev = "disabled";
+    //   console.log(prev);
+    // } else {
+    //   prev = "active";
+    //   console.log(prev);
+    // }
   };
 
   return (
