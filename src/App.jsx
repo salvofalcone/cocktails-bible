@@ -4,7 +4,7 @@ import { useState } from "react";
 import ProductSection from "./components/productSection";
 import ProductList from "./components/productList";
 import Contacts from "./components/contacts";
-import SearchBar from "./components/searcBar";
+import Navbar from "./components/navbar";
 
 import "./App.css";
 
@@ -35,24 +35,7 @@ function App() {
 
   return (
     <div className="App">
-      <nav>
-        <ul className="Nav__List">
-          <li onClick={() => setProductSection("")} className="Nav__List--Item">
-            Home
-          </li>
-
-          <li>
-            <SearchBar />
-          </li>
-
-          <li
-            onClick={() => setProductSection("contacts")}
-            className="Nav__List--Item">
-            Contact Us
-          </li>
-        </ul>
-      </nav>
-
+      <Navbar setProductSection={setProductSection} />
       {onRender()}
     </div>
   );
