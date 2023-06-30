@@ -10,21 +10,14 @@ import "./App.css";
 
 function App() {
   const [productSection, setProductSection] = useState("");
-  const [categoriesList, setCategoriesList] = useState([
-    "rum",
-    "vodka",
-    "gin",
-    "tequila",
-    "whiskey",
-  ]);
 
-  // const [categoriesList, setCategoriesList] = useState([
-  //   { name: "rum", checked: true },
-  //   { name: "vodka", checked: true },
-  //   { name: "gin", checked: true },
-  //   { name: "tequila", checked: true },
-  //   { name: "whiskey", checked: true },
-  // ]);
+  const [categoriesList, setCategoriesList] = useState([
+    { id: 1, name: "rum", status: "active" },
+    { id: 2, name: "vodka", status: "active" },
+    { id: 3, name: "gin", status: "active" },
+    { id: 4, name: "tequila", status: "active" },
+    { id: 5, name: "whiskey", status: "active" },
+  ]);
 
   const onRender = () => {
     switch (productSection) {
@@ -38,15 +31,14 @@ function App() {
               categoriesList={categoriesList}
               setCategoriesList={setCategoriesList}
             />
-            {categoriesList
-              .filter((category) => category.length > 1)
-              .map((category, i) => (
-                <ProductList
-                  name={category}
-                  setProductSection={setProductSection}
-                  key={i}
-                />
-              ))}
+
+            {categoriesList.map((category) => (
+              <ProductList
+                name={category.name}
+                setProductSection={setProductSection}
+                key={category.id}
+              />
+            ))}
           </>
         );
 

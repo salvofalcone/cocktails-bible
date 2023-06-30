@@ -2,8 +2,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  gap: 12px;
+  padding: 12px 0;
 }
 
-.Filters__Category {
-  padding-inline: 18px;
+.active {
+  background-color: rgba(0, 128, 0, 0.4);
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.disabled {
+  background-color: rgba(255, 0, 0, 0.4);
+  padding: 6px;
+  border-radius: 4px;
 }
