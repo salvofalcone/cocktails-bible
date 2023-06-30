@@ -16,8 +16,11 @@ function App() {
     { id: 2, name: "vodka", status: "active" },
     { id: 3, name: "gin", status: "active" },
     { id: 4, name: "tequila", status: "active" },
-    { id: 5, name: "whiskey", status: "active" },
+    { id: 5, name: "whiskey", status: "disabled" },
+    { id: 6, name: "campari", status: "disabled" },
   ]);
+
+  const [filteredList, setFilteredList] = useState(categoriesList);
 
   const onRender = () => {
     switch (productSection) {
@@ -30,9 +33,10 @@ function App() {
             <Filters
               categoriesList={categoriesList}
               setCategoriesList={setCategoriesList}
+              setFilteredList={setFilteredList}
             />
 
-            {categoriesList.map((category) => (
+            {filteredList.map((category) => (
               <ProductList
                 name={category.name}
                 setProductSection={setProductSection}
