@@ -3,7 +3,7 @@ import { GET } from "../../utils/http";
 
 import "./index.css";
 
-const SearchBar = () => {
+const SearchBar = ({ setProductSection }) => {
   const [searchCocktail, setSearchCocktail] = useState("");
   const [cocktailList, setCocktailList] = useState([]);
 
@@ -19,18 +19,26 @@ const SearchBar = () => {
     setSearchCocktail(e.target.value);
   };
 
+  const onHandleSubmit = (e) => {
+    e.preventDefault();
+    setProductSection(searchCocktail);
+  };
+
   return (
     <div className="SearchBar__Main">
-      <input
-        type="text"
-        name="searchbar"
-        placeholder="Search a cocktail"
-        className="SearchBar"
-        onChange={onHandleChange}
-      />
+      <form onSubmit={onHandleSubmit}>
+        <input
+          type="text"
+          name="searchbar"
+          placeholder="Search a cocktail"
+          className="SearchBar"
+          onChange={onHandleChange}
+          value={searchCocktail}
+        />
+      </form>
 
       <div className="Cocktail__Preview">
-        {cocktailList.map((cocktail) => (
+        {cocktailList?.map((cocktail) => (
           <div className="Cocktail__Preview--ListItem">
             <img
               src={cocktail.strDrinkThumb}
