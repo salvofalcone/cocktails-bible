@@ -8,13 +8,10 @@
     "build": "vite build",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "gc": "node node_modules/react-auto-component/generate_component/index.js"
   },
   "dependencies": {
     "react": "^18.2.0",
-    "react-auto-component": "^1.0.11",
     "react-dom": "^18.2.0",
-    "swiper": "^9.4.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.37",
